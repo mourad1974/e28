@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #output {
+
+            background-color: beige;
+            height: 20px;
+            padding: 20px;
+            width: 250px;
+            margin: 20px
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>Try to guess a number between 1 and 10</h4>
+    <input type="text" id="myguess">
+    <input type="submit" id="guessid">
+    <div id="output"> </div>
+
+</body>
+<script>
+    /* var guess = prompt('Guess a number between 1 and 10!'); */
+
+    let out = document.getElementById("output");
+    let guess = document.getElementById("myguess");
+    let rand_Num = Math.ceil(Math.random() * 10);
+    out.style.display = 'none';
+    document.getElementById("guessid").onclick = function () {
+
+
+        if (guess.value == rand_Num) {
+            out.innerHTML = "Yahooooo, that's the right number !!! you win";
+            out.style.display = 'block';
+        }
+
+        else if (guess.value === "") {
+
+            out.innerHTML = "The field can't be empty ";
+            out.style.display = 'block';
+        }
+
+        else if (guess.value == 0) {
+
+            out.innerHTML = "'0' is not accepted";
+            out.style.display = 'block';
+        }
+
+
+
+        else if (guess.value > 10) {
+
+            out.innerHTML = "please enter a number under 10";
+            out.style.display = 'block';
+        }
+        else if (isNaN(guess.value)) {
+
+            out.innerHTML = "Only digits are accepted";
+            out.style.display = 'block';
+        }
+        else {
+            out.innerHTML = "Wrong guess, please try again";
+            out.style.display = 'block';
+        }
+
+    }
+
+
+
+
+
+
+
+</script>
+
+</html>
