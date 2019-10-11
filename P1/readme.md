@@ -5,12 +5,13 @@
 
 ## Project Shema
 
-![image info](./images/shema.jpg)
+![game shema](./images/shema.jpg)
 
 ## Outside resources
-I used thus resources to help myself understand the concept How to disable input conditionally and i used a different apparoach 
-* https://code-examples.net/en/q/245223c
+*I used this resource to help myself understand the concept How to disable an input conditionally (I used a different apparoach)*
+
+ https://code-examples.net/en/q/245223c
 
 ## Notes for instructor
-* i would love if you could show me how to print the guesses results in one line  *
+*In the lecture I learnt how to print the guesses as a list, I would love if you could show me how to print the guesses results in one line please*
 
