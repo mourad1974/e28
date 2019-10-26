@@ -34,7 +34,7 @@ let app = new Vue({
       this.guessed = true;
 
       if (typeof this.theGuess != "number") {
-        this.feedback = "../enter a valid number";
+        this.feedback = "enter a valid number";
         this.guessed = false;
         this.printTries = false;
         this.srcImage = "../images/msg-numbers.png";
