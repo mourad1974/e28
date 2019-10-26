@@ -34,25 +34,25 @@ let app = new Vue({
       this.guessed = true;
 
       if (typeof this.theGuess != "number") {
-        this.feedback = "enter a valid number";
+        this.feedback = "../enter a valid number";
         this.guessed = false;
         this.printTries = false;
-        this.srcImage = "images/msg-numbers.png";
+        this.srcImage = "../images/msg-numbers.png";
       } else if (this.theGuess == this.randomNumber) {
         this.feedbackClass = "";
-        this.srcImage = "images/msg-won.png";
+        this.srcImage = "../images/msg-won.png";
         this.altMessage = " gongrats! you won";
       } else if (this.theGuess >= this.limit2) {
         this.feedbackClass = "";
-        this.srcImage = "images/msg-below.png";
+        this.srcImage = "../images/msg-below.png";
         this.altMessage = "no number above 10";
       } else if (this.theGuess <= this.limit1) {
         this.feedbackClass = "";
-        this.srcImage = "images/msg-above.png";
+        this.srcImage = "../images/msg-above.png";
         this.altMessage = "no number below 1";
       } else {
         this.feedbackClass = "error";
-        this.srcImage = "images/msg-try.png";
+        this.srcImage = "../images/msg-try.png";
         this.altMessage = "try again";
       }
     },
