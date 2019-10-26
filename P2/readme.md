@@ -13,5 +13,7 @@ _I didn't use any outside resources for P2_
 
 ## Notes for instructor
 
-_when I tried to make the project ready for the prodion aqnd minify the "js file" throught the command "npm run production" lot of part of the game don't work anymore with the minified version, when I skip this command and leave the 'JS files not minified everything seems to work perfect.
-so I did try it so many time to be sure, and at the end I skipped this command but kept everything as shown in the lectures _
+- when I tried to make the project ready for the prodion aqnd minify the "js file" throught the command "npm run production" lot of part of the game don't work anymore with the minified version, when I skip this command and leave the 'JS files not minified everything seems to work perfect.
+  so I did try it so many time to be sure, and at the end I skipped this command but kept everything as shown in the lectures
+
+- in my P1 readme file i used a realtive path to link the image, but for some reasons, it doesn't work on P2, so I used an absoulte path
