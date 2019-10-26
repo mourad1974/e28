@@ -5,7 +5,7 @@
 
 ## Project Shema
 
-![game shema](./images/p2-shema.jpg)
+![game shema](https://github.com/mourad1974/e28/blob/master/P2/images/P2-Shema.jpg)
 
 ## Outside resources
 
