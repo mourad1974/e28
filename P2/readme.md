@@ -1,17 +1,17 @@
+# Project 2
 
-# Project 1
-+ By: *Mourad Saleh*
-+ Production URL: <http://p1.hes19.website>
+- By: _Mourad Saleh_
+- Production URL: <http://p2.hes19.website>
 
 ## Project Shema
 
-![game shema](./images/shema.jpg)
+![game shema](./images/p2-shema.jpg)
 
 ## Outside resources
-*I used this resource to help myself understand the concept How to disable an input conditionally (I used a different apparoach)*
 
- https://code-examples.net/en/q/245223c
+_I didn't use any outside resources for P2_
 
 ## Notes for instructor
-*In the lecture I learnt how to print the guesses as a list, I would love if you could show me how to print the guesses results in one line please*
 
+_when I tried to make the project ready for the prodion aqnd minify the "js file" throught the command "npm run production" lot of part of the game don't work anymore with the minified version, when I skip this command and leave the 'JS files not minified everything seems to work perfect.
+so I did try it so many time to be sure, and at the end I skipped this command but kept everything as shown in the lectures _
