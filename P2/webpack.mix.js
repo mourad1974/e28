@@ -4,7 +4,7 @@ mix.js("src/script.js", "js");
 
 mix.options({
   hmrOptions: {
-    host: "p2.loc",
+    host: "P2.loc",
     port: 8080
   }
 });

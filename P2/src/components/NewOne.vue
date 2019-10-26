@@ -1,8 +1,9 @@
 <template>
   <div>
-    <p>Your Guess number {{rank}} is : {{range}}</p>
+    <p>Your {{rank}} is : {{range}}</p>
   </div>
 </template>
+
 
 
 <script>
@@ -12,10 +13,6 @@ module.exports = {
   },
 
   props: ["range", "rank"],
-  template: "#my-guess"
+  template: "#new-one"
 };
 </script>
-
-
-<style>
-</style>

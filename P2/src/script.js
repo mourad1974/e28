@@ -1,13 +1,11 @@
 import Vue from "vue";
-import MyGuess from "./components/MyGuess.vue";
+import NewOne from "./components/NewOne.vue";
 
 let app = new Vue({
   el: "#app",
-
   components: {
-    "my-guess": MyGuess
+    "new-one": NewOne
   },
-
   data: {
     guessed: false,
     theGuess: [],
