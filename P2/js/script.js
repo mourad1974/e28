@@ -595,7 +595,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("p", [_vm._v("Your " + _vm._s(_vm.rank) + " is : " + _vm._s(_vm.range))])
+    _c("p", [
+      _vm._v("Your try #" + _vm._s(_vm.rank) + " is : " + _vm._s(_vm.range))
+    ])
   ])
 }
 var staticRenderFns = []
@@ -12828,22 +12830,22 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
         this.feedback = "enter a valid number";
         this.guessed = false;
         this.printTries = false;
-        this.srcImage = "images/msg-numbers.png";
+        this.srcImage = "../images/msg-numbers.png";
       } else if (this.theGuess == this.randomNumber) {
         this.feedbackClass = "";
-        this.srcImage = "images/msg-won.png";
+        this.srcImage = "../images/msg-won.png";
         this.altMessage = " gongrats! you won";
       } else if (this.theGuess >= this.limit2) {
         this.feedbackClass = "";
-        this.srcImage = "images/msg-below.png";
+        this.srcImage = "../images/msg-below.png";
         this.altMessage = "no number above 10";
       } else if (this.theGuess <= this.limit1) {
         this.feedbackClass = "";
-        this.srcImage = "images/msg-above.png";
+        this.srcImage = "../images/msg-above.png";
         this.altMessage = "no number below 1";
       } else {
         this.feedbackClass = "error";
-        this.srcImage = "images/msg-try.png";
+        this.srcImage = "../images/msg-try.png";
         this.altMessage = "try again";
       }
     },
