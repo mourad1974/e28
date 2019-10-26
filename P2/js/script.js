@@ -595,9 +595,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("p", [
-      _vm._v("Your try #" + _vm._s(_vm.rank) + " is : " + _vm._s(_vm.range))
-    ])
+    _c("p", [_vm._v("Try #" + _vm._s(_vm.rank) + " is : " + _vm._s(_vm.range))])
   ])
 }
 var staticRenderFns = []

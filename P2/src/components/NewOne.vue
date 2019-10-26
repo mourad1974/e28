@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Your try #{{rank}} is : {{range}}</p>
+    <p>Your trybbb #{{rank}} is : {{range}}</p>
   </div>
 </template>
 
