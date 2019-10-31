@@ -98,7 +98,10 @@
             <!-- <h4> Your previous Guesses</h4> -->
           
            
-            <new-one class="result" v-for='(theTry,index) in allTries' v-show='printTries' :range='theTry' :rank='index' v-bind:key="number"> </new-one>
+            <new-one class="result" v-for='(theTry,index) in allTries' v-show='printTries' 
+            :range='theTry' 
+            :rank='index' 
+            v-bind:key="theTry"> </new-one>
 
   
             <!-- text to how the rules of the game -->
