@@ -64,7 +64,6 @@
 
 </head>
 
-
 <body>
 
    
@@ -79,10 +78,10 @@
             <!-- the input field -->
             <div>
                 <label for='theGuess'>Guess a number between 1 and 10</label><br><br>
-                <input type='number' id='theGuess' v-model.number='theGuess' :disabled="disable == false">
+                <input type='number' id='theGuess' v-model.number='theGuess' >
             </div><br>
 
-        
+    
             <!-- the feedback images with text inside -->
             <img v-if='guessed' :alt='altMessage' :src='srcImage'> <br><br>
            
@@ -99,7 +98,7 @@
             <!-- <h4> Your previous Guesses</h4> -->
           
            
-            <new-one class="result" v-for='(theTry,index) in allTries' v-show='printTries' :range='theTry' :rank='index'> </new-one>
+            <new-one class="result" v-for='(theTry,index) in allTries' v-show='printTries' :range='theTry' :rank='index' v-bind:key="number"> </new-one>
 
   
             <!-- text to how the rules of the game -->
