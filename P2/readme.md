@@ -1,4 +1,4 @@
-# Project 2
+# Project 2- Intergrated Approach
 
 - By: _Mourad Saleh_
 - Production URL: <http://p2.hes19.website>
@@ -13,7 +13,9 @@ _I didn't use any outside resources for P2_
 
 ## Notes for instructor
 
-- when I tried to make the project ready for the prodion aqnd minify the "js file" throught the command "npm run production" lot of part of the game don't work anymore with the minified version, when I skip this command and leave the 'JS files not minified everything seems to work perfect.
-  so I did try it so many time to be sure, and at the end I skipped this command but kept everything as shown in the lectures
+- Based on the lecture, I undertood that; we as a developpers; will be more luckily be using the integrated aprroach rather than the comprehensive approach, so that's the reason behind my choice, and also to stay close the most common praticle coding environment. <br>
+  I couldn't have large choices to implement compenents in my project, so I followed what I thought small steps but sure enought to help myself have a good understanding of the concept.
 
-- in my P1 readme file i used a realtive path to link the image, but for some reasons, it doesn't work on P2, so I used an absoulte path
+* When I tried to make the project ready for the production and minify "js" throught the command "npm run production" but it semms that some of parts of the game don't work anymore (I tried it 2 times),so finally I skip this command and left 'JS" files as it is (not minified) everything seems to work perfect.
+
+- In my P1 readme file i used a realtive path to link the image, but for some reasons, it doesn't work on P2, so I used an absoulte path
