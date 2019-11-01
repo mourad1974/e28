@@ -1,4 +1,4 @@
-# Project 2- Intergrated Approach
+# P2 - Intergrated Approach
 
 - By: _Mourad Saleh_
 - Production URL: <http://p2.hes19.website>
@@ -13,9 +13,8 @@ _I didn't use any outside resources for P2_
 
 ## Notes for instructor
 
-- Based on the lecture, I undertood that; we as a developpers; will be more luckily be using the integrated aprroach rather than the comprehensive approach, so that's the reason behind my choice, and also to stay close the most common praticle coding environment.
+- Based on the lecture, I undertood that; we as developpers; will be more luckily be using the integrated aprroach rather than the comprehensive approach, so that's the reason behind my choice, and also to stay close the most common praticle coding environment.
 
 - I couldn't have large choices to implement components in my project, so I followed what I thought small steps but sure enought to help myself have a good understanding of the concept.
 
-- In my P1 readme file I used a realtive path to link the image, but for some reasons, it doesn't work on P2, so I used an absoulte path
-  .
+- In my P1 readme file I used a realtive path to link the image, but for some reasons, it doesn't work on P2, so I used an absoulte path.
