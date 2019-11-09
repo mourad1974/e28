@@ -5,16 +5,22 @@
   </div>
 </template>  
 <script>
-import ShowProduct from "./ShowProduct.vue";
-import { products } from "./../products.js";
+import ShowProduct from "./../ShowProduct.vue";
+const axios = require("axios");
 export default {
-  name: "ShowProducts",
+  name: "Productpage",
   components: { ShowProduct },
-
   data: function() {
     return {
-      products: products
+      products: null
     };
+  },
+  mounted() {
+    axios
+      .get("https://my-json-server.typicode.com/mourad1974/e28-p3-api/products")
+      .then(response => {
+        this.products = response.data;
+      });
   }
 };
 </script>

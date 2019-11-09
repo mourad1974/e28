@@ -6,9 +6,9 @@
   </div>
 </template>
 <script>
-import ShowFeatured from "./ShowFeatured.vue";
+import ShowFeatured from "./../ShowFeatured.vue";
 export default {
-  name: "ShowHome",
+  name: "HomePage",
   components: { ShowFeatured },
   data: function() {
     return {
