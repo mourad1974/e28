@@ -1,14 +1,14 @@
 <template>
-  <div id="products">
+  <div id='products'>
     <h2>Products</h2>
-    <show-product v-for="product in products" :key="product.id" :product="product"></show-product>
+    <show-product v-for='product in products' :key='product.id' :product='product'></show-product>
   </div>
 </template>  
 <script>
-import ShowProduct from "./../ShowProduct.vue";
-const axios = require("axios");
+import ShowProduct from './../ShowProduct.vue';
+import * as app from './../../app.js';
 export default {
-  name: "Productpage",
+  name: 'Productpage',
   components: { ShowProduct },
   data: function() {
     return {
@@ -16,11 +16,9 @@ export default {
     };
   },
   mounted() {
-    axios
-      .get("https://my-json-server.typicode.com/mourad1974/e28-p3-api/products")
-      .then(response => {
-        this.products = response.data;
-      });
+    app.axios.get(app.config.api + 'products').then(response => {
+      this.products = response.data;
+    });
   }
 };
 </script>
