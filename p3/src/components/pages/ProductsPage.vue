@@ -1,15 +1,17 @@
 <template>
-  <div id='products'>
-    <h2>Products</h2>
-    <show-product v-for='product in products' :key='product.id' :product='product'></show-product>
+  <div>
+    <h2>All Recipes</h2>
+    <div id='products'>
+      <recipe-detail v-for='product in products' :key='product.id' :product='product'></recipe-detail>
+    </div>
   </div>
 </template>  
 <script>
-import ShowProduct from './../ShowProduct.vue';
+import RecipeDetail from './../RecipeDetail.vue';
 import * as app from './../../app.js';
 export default {
   name: 'Productpage',
-  components: { ShowProduct },
+  components: { RecipeDetail },
   data: function() {
     return {
       products: null

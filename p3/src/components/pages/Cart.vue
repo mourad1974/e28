@@ -1,12 +1,15 @@
 <template>
-  <div id="cart-page">
-    <h1>your cart</h1>
-    <div v-if="items.length == 0">No items</div>
+  <div id='cart-page'>
+    <h1>Your Recipes Cart</h1>
+    <div v-if='items.length == 0'>Empty Cart</div>
 
-    <ul v-else-if="products.length > 0" class="cleanList">
-      <li v-for="item in items" :key="item.id">
-        <button @click="removeFromCart(item.id)">Remove</button>
-        {{item.quantity}} x {{getProductDetails(item.id)['name']}}
+    <ul v-else-if='products.length > 0'>
+      <li v-for='item in items' :key='item.id' class='shpping-cart'>
+        {{item.quantity}} Recipe(s) of
+        "
+        <span>{{getProductDetails(item.id)['name']}}</span>"
+        <br />
+        <button @click='removeFromCart(item.id)'>Delete This recipe</button>
       </li>
     </ul>
   </div>
@@ -15,9 +18,9 @@
 
 
 <script>
-import * as app from "./../../app.js";
+import * as app from './../../app.js';
 export default {
-  name: "CartPage",
+  name: 'Cart',
   data: function() {
     return {
       items: [],
@@ -40,7 +43,7 @@ export default {
     this.items = this.cart.getItems();
 
     this.products = app.axios
-      .get(app.config.api + "products")
+      .get(app.config.api + 'products')
       .then(response => (this.products = response.data));
   }
 };

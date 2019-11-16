@@ -1,29 +1,28 @@
 <template>
-  <div id="product-page" v-if="product">
+  <div id='product-page' v-if='product'>
     <h1>{{ product.name }}</h1>
     <img
-      v-if="product.id"
-      class="product-thumb"
-      :alt="'Product image of ' + product.name"
-      :src="require('./../../assets/images/products/' + product.id + '.jpg')"
+      v-if='product.id'
+      :alt='"Product image of " + product.name'
+      :src='require("./../../assets/images/products/" + product.id + ".jpg")'
     />
-    <p class="description">{{ product.description }}</p>
-    <div class="price">${{ product.price }}</div>
-    <button @click="addToCart(product.id)">Add to Cart</button>
-    <transition name="fade">
-      <div class="alert" v-if="addAlert">you added item</div>
-    </transition>
-    <router-link :to="'/products'">&larr; Return to all products</router-link>
+    <p class='ingredients'>{{ product.ingredients}}</p>
+    <!-- <div class='price'>${{ product.price }}</div> -->
+    <button @click='addToCart(product.id)'>Add to Cart</button>
+
+    <div class='alert' v-if='addAlert'>Item was added to your cart</div>
+
+    <!-- <router-link :to='"/products"'>&larr; Return to all products</router-link> -->
   </div>
 </template>
 
 
 <script>
-import * as app from "./../../app.js";
+import * as app from './../../app.js';
 
 export default {
-  name: "Productpage",
-  props: ["id"],
+  name: 'RecipePage',
+  props: ['id'],
   data: function() {
     return {
       product: null,
@@ -32,7 +31,7 @@ export default {
   },
   mounted() {
     app.axios
-      .get(app.config.api + "/products/" + this.id)
+      .get(app.config.api + '/products/' + this.id)
 
       .then(response => {
         this.product = response.data;
