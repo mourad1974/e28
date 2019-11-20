@@ -1,17 +1,34 @@
 <template>
   <div>
     <h2>Filtered Recipes</h2>
+
     <div id='filtered'>
       <router-link to='{name: "product", params: { "id" :product.id}}'>
         <ul class='cleanList'>
-          <li v-for='product in FilteredRecipes' :key='product.id'>
-            <p>{{ product.name }}</p>
-            <br />
-            <img :src='require("./../assets/images/products/" + product.id + ".jpg")' />
-          </li>
+          <router-link
+            v-for='product in
+FilteredRecipes'
+            :key='product.id'
+            :to='{
+name: "product",
+params: { "id":
+product.id }}'
+          >
+            <li>
+              <p>
+                {{ product.name
+                }}
+              </p>
+
+              <br />
+
+              <img :src='require("./../assets/images/products/"
++ product.id +
+".jpg")' />
+            </li>
+          </router-link>
         </ul>
       </router-link>
-      
     </div>
   </div>
 </template>

@@ -6,7 +6,7 @@
 <script>
 import FilteredProducts from './../FilteredProducts.vue';
 export default {
-  name: 'HomePage',
+  name: 'GlutenFreePage',
   components: { FilteredProducts },
   data: function() {
     return {

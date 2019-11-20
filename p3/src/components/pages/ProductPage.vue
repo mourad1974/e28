@@ -7,12 +7,8 @@
       :src='require("./../../assets/images/products/" + product.id + ".jpg")'
     />
     <p class='ingredients'>{{ product.ingredients}}</p>
-    <!-- <div class='price'>${{ product.price }}</div> -->
     <button @click='addToCart(product.id)'>Add to Cart</button>
-
     <div class='alert' v-if='addAlert'>Item was added to your cart</div>
-
-    <!-- <router-link :to='"/products"'>&larr; Return to all products</router-link> -->
   </div>
 </template>
 
@@ -21,7 +17,7 @@
 import * as app from './../../app.js';
 
 export default {
-  name: 'RecipePage',
+  name: 'ProductsPage',
   props: ['id'],
   data: function() {
     return {

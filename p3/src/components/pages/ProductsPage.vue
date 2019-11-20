@@ -10,7 +10,7 @@
 import RecipeDetail from './../RecipeDetail.vue';
 import * as app from './../../app.js';
 export default {
-  name: 'Productpage',
+  name: 'Productspage',
   components: { RecipeDetail },
   data: function() {
     return {

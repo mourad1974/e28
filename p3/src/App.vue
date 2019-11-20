@@ -1,6 +1,6 @@
 <template>
   <div id='app'>
-    <img id='logo' alt='ZipFood logo' src='./assets/images/logo-br.jpg' />
+    <img id='logo' alt='boston Recipes logo' src='./assets/images/logo-br.jpg' />
     <p class='signature'>The Best Recipes From Boston</p>
     <nav>
       <ul>
