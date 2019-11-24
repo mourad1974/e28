@@ -27,5 +27,12 @@ export default new Vuex.Store({
         context.commit("setProducts", response.data);
       });
     }
+  },
+  getters: {
+    getProductById(state) {
+      return function(id) {
+        return state.products.find(product => product.id == id);
+      };
+    }
   }
 });

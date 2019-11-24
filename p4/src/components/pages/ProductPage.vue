@@ -21,17 +21,21 @@ export default {
   props: ['id'],
   data: function() {
     return {
-      product: null,
+      // product: null,
       addAlert: false
     };
   },
   mounted() {
-    app.axios
-      .get(app.config.api + '/products/' + this.id)
-
-      .then(response => {
-        this.product = response.data;
-      });
+    // app.axios
+    //   .get(app.config.api + '/products/' + this.id)
+    //   .then(response => {
+    //     this.product = response.data;
+    //   });
+  },
+  computed: {
+    product: function() {
+      return this.$store.getters.getProductById(this.id);
+    }
   },
   methods: {
     addToCart: function(productId) {
