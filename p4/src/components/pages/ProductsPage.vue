@@ -8,19 +8,24 @@
 </template>  
 <script>
 import RecipeDetail from './../RecipeDetail.vue';
-import * as app from './../../app.js';
+// import * as app from './../../app.js';
 export default {
   name: 'Productspage',
   components: { RecipeDetail },
   data: function() {
     return {
-      products: null
+      // products: null
     };
   },
   mounted() {
-    app.axios.get(app.config.api + 'products').then(response => {
-      this.products = response.data;
-    });
+    // app.axios.get(app.config.api + 'products').then(response => {
+    //   this.products = response.data;
+    // });
+  },
+  computed: {
+    products: function() {
+      return this.$store.state.products;
+    }
   }
 };
 </script>

@@ -24,8 +24,7 @@ export default {
   data: function() {
     return {
       items: [],
-      cart: null,
-      products: []
+      cart: null
     };
   },
   methods: {
@@ -39,13 +38,15 @@ export default {
     }
   },
 
+  computed: {
+    products: function() {
+      return this.$store.state.products;
+    }
+  },
+
   mounted() {
     this.cart = new app.Cart();
     this.items = this.cart.getItems();
-
-    this.products = app.axios
-      .get(app.config.api + 'products')
-      .then(response => (this.products = response.data));
   }
 };
 </script>

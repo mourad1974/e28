@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-// import * as app from "./../app.js";
+import * as app from "./../app.js";
 
 Vue.use(Vuex);
 
@@ -16,9 +16,16 @@ export default new Vuex.Store({
     },
     updateCartCount(state, payload) {
       state.cartCount += payload;
+    },
+    setProducts(state, payload) {
+      state.products = payload;
     }
-    // setProducts(state, payload) {
-    //     state.products = payload;
-    // }
+  },
+  actions: {
+    setProducts(context) {
+      app.axios.get(app.config.api + "products").then(response => {
+        context.commit("setProducts", response.data);
+      });
+    }
   }
 });

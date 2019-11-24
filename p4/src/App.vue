@@ -25,7 +25,7 @@ export default {
   components: {},
   data: function() {
     return {
-      products: null,
+      // products: null,
 
       links: ['recipes', 'vegan', 'Gluten Free', 'cart']
     };
@@ -38,8 +38,8 @@ export default {
 
   mounted() {
     this.cart = new app.Cart();
-    // app.store.cartCount = this.cart.count();
     this.$store.commit('setCartCount', this.cart.count());
+    this.$store.dispatch('setProducts');
   }
 };
 </script>
