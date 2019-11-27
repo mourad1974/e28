@@ -1,23 +1,23 @@
 <template>
-  <div id="product-page" v-if="product">
-    <h1>{{ product.name }}</h1>
+  <div id='product-page' v-if='product'>
+    <h1 data-test='product-name'>{{ product.name }}</h1>
     <img
-      v-if="product.id"
-      :alt="'Product image of ' + product.name"
-      :src="require('./../../assets/images/products/' + product.id + '.jpg')"
+      v-if='product.id'
+      :alt='"Product image of " + product.name'
+      :src='require("./../../assets/images/products/" + product.id + ".jpg")'
     />
-    <p class="ingredients">{{ product.ingredients }}</p>
-    <button @click="addToCart(product.id)">Add to Cart</button>
-    <div class="alert" v-if="addAlert">Item was added to your cart</div>
+    <p class='ingredients'>{{ product.ingredients }}</p>
+    <button data-test='add-recipe' @click='addToCart(product.id)'>Add to Cart</button>
+    <div data-test='add-alert' class='alert' v-if='addAlert'>Item was added to your cart</div>
   </div>
 </template>
 
 <script>
-import * as app from "./../../app.js";
+import * as app from './../../app.js';
 
 export default {
-  name: "ProductsPage",
-  props: ["id"],
+  name: 'ProductsPage',
+  props: ['id'],
   data: function() {
     return {
       addAlert: false
@@ -33,7 +33,7 @@ export default {
     addToCart: function(productId) {
       let cart = new app.Cart();
       cart.add(productId);
-      this.$store.commit("setCartCount", cart.count());
+      this.$store.commit('setCartCount', cart.count());
 
       this.addAlert = true;
       setTimeout(() => (this.addAlert = false), 2000);

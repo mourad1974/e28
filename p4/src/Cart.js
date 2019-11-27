@@ -76,6 +76,8 @@ export default class Cart {
    * Returns null if product does not exist in items
    */
   getItem(productId) {
-    return this.items.find(({ id }) => id === productId) || null;
+    return this.items.find(({
+      id
+    }) => id === productId) || null;
   }
 }

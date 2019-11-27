@@ -6,25 +6,24 @@
       <router-link to='{name: "product", params: { "id" :product.id}}'>
         <ul class='cleanList'>
           <router-link
-            v-for='product in
-FilteredRecipes'
+            data-test='product-name'
+            v-for='product in FilteredRecipes'
             :key='product.id'
             :to='{
-name: "product",
-params: { "id":
-product.id }}'
+              name: "product",
+              params: { id: product.id }
+            }'
           >
             <li>
-              <p>
-                {{ product.name
-                }}
-              </p>
+              <p>{{ product.name }}</p>
 
               <br />
 
-              <img :src='require("./../assets/images/products/"
-+ product.id +
-".jpg")' />
+              <img
+                :src='
+                  require("./../assets/images/products/" + product.id + ".jpg")
+                '
+              />
             </li>
           </router-link>
         </ul>

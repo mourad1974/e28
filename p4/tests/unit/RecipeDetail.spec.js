@@ -9,7 +9,7 @@ import RecipeDetail from "@/components/RecipeDetail.vue";
 
 describe("RecipeDetail.vue", () => {
   it("show details of a recipe ", () => {
-    // const msg = "new message";
+
     let product = {
       id: 1,
       name: 'Driscoll’s Strawberries',
