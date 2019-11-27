@@ -1,26 +1,24 @@
 <template>
-  <div id='cart-page'>
+  <div id="cart-page">
     <h1>Your Recipes Cart</h1>
-    <div v-if='items.length == 0'>Empty Cart</div>
+    <div v-if="items.length == 0">Empty Cart</div>
 
-    <ul v-else-if='products.length > 0'>
-      <li v-for='item in items' :key='item.id' class='shpping-cart'>
-        {{item.quantity}} Recipe(s) of
-        "
-        <span>{{getProductDetails(item.id)['name']}}</span>"
+    <ul v-else-if="products.length > 0">
+      <li v-for="item in items" :key="item.id" class="shpping-cart">
+        {{ item.quantity }} Recipe(s) of "
+        <span>{{ getProductDetails(item.id)["name"] }}</span
+        >"
         <br />
-        <button @click='removeFromCart(item.id)'>Delete This recipe</button>
+        <button @click="removeFromCart(item.id)">Delete This recipe</button>
       </li>
     </ul>
   </div>
 </template>
 
-
-
 <script>
-import * as app from './../../app.js';
+import * as app from "./../../app.js";
 export default {
-  name: 'Cart',
+  name: "Cart",
   data: function() {
     return {
       items: [],
@@ -33,8 +31,7 @@ export default {
     },
     removeFromCart: function(productId) {
       this.cart.remove(productId);
-      // app.store.cartCount = this.cart.count();
-      this.$store.commit('setCartCount', this.cart.count());
+      this.$store.commit("setCartCount", this.cart.count());
     }
   },
 

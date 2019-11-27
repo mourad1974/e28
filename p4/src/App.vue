@@ -25,8 +25,6 @@ export default {
   components: {},
   data: function() {
     return {
-      // products: null,
-
       links: ['recipes', 'vegan', 'Gluten Free', 'cart']
     };
   },
