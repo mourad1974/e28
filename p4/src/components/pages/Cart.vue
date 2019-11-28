@@ -8,10 +8,7 @@
         {{ item.quantity }} Recipe(s) of
         <span>{{ getProductDetails(item.id)["name"] }}</span>
         <br />
-        <button
-          data-test='remove-from-cart-button'
-          @click='removeFromCart(item.id)'
-        >Delete This recipe</button>
+        <button data-test='remove recipe' @click='removeFromCart(item.id)'>Delete This recipe</button>
       </li>
     </ul>
   </div>
