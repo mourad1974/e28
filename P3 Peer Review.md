@@ -4,20 +4,19 @@
 + Reviwee's name: Ali Pordeli
 + URL to reviewee's Github repo: *<https://github.com/coinshot/e28/tree/master/p3>*
 
-*Answer the following questions in regards to the student's project you are reviewing. Include context and code examples in your answers when relevant.*
 
 
 ### Are you able to produce any errors or unexpected results? 
 > No
 
 ### Were there any parts of the interface that you found confusing or unclear?
-> very well organized interface for me and I could understand the concept generally, he has done very good work when it comes Separation of concerns
+> Very well organized interface,  I could understand the concept generally, he has done very good work when it comes to Separation of concerns
 
 ### Are there aspects of the code that you feel were not self-evident and would benefit from comments?
 > No
 
 ### Are there any parts of the code that you found interesting or taught you something new?
-> yes, its the separation of concerns and its especially help to maintain clean code,
+> Yes, it's the separation of concerns and its especially help to maintain clean code to understand,
 
  
 
