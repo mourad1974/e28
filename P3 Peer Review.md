@@ -8,25 +8,29 @@
 
 
 ### Are you able to produce any errors or unexpected results? 
-No
+> No
 
 ### Were there any parts of the interface that you found confusing or unclear?
-very well organized interface for me and I could understand the concept generally, he has done very good work when it comes Separation of concerns
+> very well organized interface for me and I could understand the concept generally, he has done very good work when it comes Separation of concerns
 
 ### Are there aspects of the code that you feel were not self-evident and would benefit from comments?
-No
+> No
 
 ### Are there any parts of the code that you found interesting or taught you something new?
-yes, its the separation of concerns and its especially help to maintain clean code,
+> yes, its the separation of concerns and its especially help to maintain clean code,
 
  
 
 ### Are there any best practices discussed in course material that you feel were not addressed in the code?
-No
+> No
 
 ### Do you have any additional comments not covered in the above questions?
-I couldnt understand the "Qsvg" here:
+> I couldnt understand the "Qsvg" here:
+```html
  <img class="icon" Qsvg src="@/assets/images/icons/home.svg">
+ ```
 
- also I would love to understand this:
+> also I would love to understand this:
+```js
  this.userInput = val.replace(/[^\w\s]/gi, '')
+ ```
