@@ -1,10 +1,12 @@
 html {
   box-sizing: border-box;
 }
+
 :before,
 *:after {
   box-sizing: inherit;
 }
+
 #app {
   width: 90%;
   margin: 0 auto;
@@ -27,9 +29,11 @@ nav ul li {
   line-height: 70px;
   margin: 1rem;
 }
+
 nav ul {
   list-style: none;
 }
+
 nav ul li a {
   text-decoration: none;
   font-family: verdana;
@@ -37,6 +41,7 @@ nav ul li a {
   font-size: 1.1rem;
   text-transform: capitalize;
 }
+
 nav a:hover {
   color: yellow;
 }
@@ -62,14 +67,17 @@ nav a:hover {
   text-align: center;
   text-decoration: none;
 }
+
 .product a {
   text-decoration: none;
 }
+
 #products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .product {
   width: 40%;
   margin: 0 auto;
@@ -132,17 +140,21 @@ nav a:hover {
   border-radius: 2rem;
   font-size: 1.3rem;
 }
+
 #products {
   text-align: center;
 }
+
 #app {
   text-align: center;
 }
+
 #filtered ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 #filtered li {
   background-color: #ff9b30;
   list-style: none;
@@ -164,6 +176,7 @@ nav a:hover {
   list-style: none;
   font-size: 1rem;
 }
+
 span {
   color: lightseagreen;
   font-size: 1.3rem;
@@ -176,6 +189,7 @@ span {
   color: white;
   font-size: 1rem;
 }
+
 .cart-item {
   margin-bottom: 2rem;
 }
