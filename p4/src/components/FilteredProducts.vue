@@ -2,17 +2,17 @@
   <div>
     <h2>Filtered Recipes</h2>
 
-    <div id='filtered'>
+    <div id="filtered">
       <router-link to='{name: "product", params: { "id" :product.id}}'>
-        <ul class='cleanList'>
+        <ul class="cleanList">
           <router-link
-            data-test='product-name'
-            v-for='product in FilteredRecipes'
-            :key='product.id'
-            :to='{
-              name: "product",
+            data-test="product-name"
+            v-for="product in FilteredRecipes"
+            :key="product.id"
+            :to="{
+              name: 'product',
               params: { id: product.id }
-            }'
+            }"
           >
             <li>
               <p>{{ product.name }}</p>
@@ -20,9 +20,9 @@
               <br />
 
               <img
-                :src='
-                  require("./../assets/images/products/" + product.id + ".jpg")
-                '
+                :src="
+                  require('./../assets/images/products/' + product.id + '.jpg')
+                "
               />
             </li>
           </router-link>
@@ -32,12 +32,12 @@
   </div>
 </template>
 <script>
-import { products } from './../products.js';
-import * as app from './../app.js';
+import { products } from "./../products.js";
+import * as app from "./../app.js";
 
 export default {
-  name: 'FilteredProducts',
-  props: ['category'],
+  name: "FilteredProducts",
+  props: ["category"],
 
   data: function() {
     return {
@@ -46,7 +46,7 @@ export default {
   },
 
   mounted() {
-    app.axios.get(app.config.api + 'products').then(response => {
+    app.axios.get(app.config.api + "products").then(response => {
       this.products = response.data;
     });
   },
