@@ -3,14 +3,13 @@
     <h1>Your Recipes Cart</h1>
     <div v-if="items.length == 0">Empty Cart</div>
 
-    <ul data-test="cart-contents" v-else-if="products.length > 0">
+    <ul v-else-if="products.length > 0">
       <li v-for="item in items" :key="item.id" class="shpping-cart">
-        {{ item.quantity }} Recipe(s) of
-        <span>{{ getProductDetails(item.id)["name"] }}</span>
+        {{ item.quantity }} Recipe(s) of "
+        <span>{{ getProductDetails(item.id)["name"] }}</span
+        >"
         <br />
-        <button data-test="remove recipe" @click="removeFromCart(item.id)">
-          Delete This recipe
-        </button>
+        <button @click="removeFromCart(item.id)">Delete This recipe</button>
       </li>
     </ul>
   </div>

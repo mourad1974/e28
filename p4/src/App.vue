@@ -1,19 +1,13 @@
 <template>
-  <div id="app">
-    <img
-      id="logo"
-      alt="boston Recipes logo"
-      src="./assets/images/logo-br.jpg"
-    />
-    <p class="signature">The Best Recipes From Boston</p>
+  <div id='app'>
+    <img id='logo' alt='boston Recipes logo' src='./assets/images/logo-br.jpg' />
+    <p class='signature'>The Best Recipes From Boston</p>
     <nav>
       <ul>
-        <li v-for="link in links" :key="link">
-          <router-link exact :to="{ name: link }">
-            {{ link }}
-            <span data-test="cart-count" v-if="link == 'cart'"
-              >({{ cartCount }})</span
-            >
+        <li v-for='link in links' :key='link'>
+          <router-link exact :to='{name: link}'>
+            {{link }}
+            <span v-if='link == "cart"'>({{cartCount}})</span>
           </router-link>
         </li>
       </ul>
@@ -24,14 +18,14 @@
 </template>
 
 <script>
-import * as app from "./app.js";
+import * as app from './app.js';
 
 export default {
-  name: "app",
+  name: 'app',
   components: {},
   data: function() {
     return {
-      links: ["recipes", "vegan", "Gluten Free", "cart"]
+      links: ['recipes', 'vegan', 'Gluten Free', 'cart']
     };
   },
   computed: {
@@ -42,12 +36,13 @@ export default {
 
   mounted() {
     this.cart = new app.Cart();
-    this.$store.commit("setCartCount", this.cart.count());
-    this.$store.dispatch("setProducts");
+    this.$store.commit('setCartCount', this.cart.count());
+    this.$store.dispatch('setProducts');
   }
 };
 </script>
 
-<style lang="scss">
-@import "./assets/css/br.css";
+<style lang='scss'>
+@import './assets/css/br.css';
 </style>
+

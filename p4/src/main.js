@@ -13,21 +13,14 @@ import store from "./store";
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
-const routes = [{
-    path: "/Vegan",
-    component: VeganPage,
-    name: "vegan"
-  },
+const routes = [
+  { path: "/Vegan", component: VeganPage, name: "vegan" },
   {
     path: "/GlutenFree",
     component: GlutenFreePage,
     name: "Gluten Free"
   },
-  {
-    path: "/",
-    component: ProductsPage,
-    name: "recipes"
-  },
+  { path: "/", component: ProductsPage, name: "recipes" },
   {
     path: "/product/:id",
     component: ProductPage,
@@ -35,11 +28,7 @@ const routes = [{
     props: true
   },
 
-  {
-    path: "/cart",
-    component: Cart,
-    name: "cart"
-  }
+  { path: "/cart", component: Cart, name: "cart" }
 ];
 const router = new VueRouter({
   routes: routes,

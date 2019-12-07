@@ -7,8 +7,8 @@
       :src='require("./../../assets/images/products/" + product.id + ".jpg")'
     />
     <p class='ingredients'>{{ product.ingredients }}</p>
-    <button data-test='add-recipe' @click='addToCart(product.id)'>Add to Cart</button>
-    <div data-test='add-alert' class='alert' v-if='addAlert'>Item was added to your cart</div>
+    <button @click='addToCart(product.id)'>Add to Cart</button>
+    <div class='alert' v-if='addAlert'>Item was added to your cart</div>
   </div>
 </template>
 

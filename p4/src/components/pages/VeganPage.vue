@@ -1,16 +1,16 @@
 <template>
   <div>
-    <filtered-products :category="FilteredRecipes"></filtered-products>
+    <filtered-products :category='FilteredRecipes'></filtered-products>
   </div>
 </template>
 <script>
-import FilteredProducts from "./../FilteredProducts.vue";
+import FilteredProducts from './../FilteredProducts.vue';
 export default {
-  name: "VeganPage",
+  name: 'VeganPage',
   components: { FilteredProducts },
   data: function() {
     return {
-      FilteredRecipes: "vegan"
+      FilteredRecipes: 'vegan'
     };
   }
 };
