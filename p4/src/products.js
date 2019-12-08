@@ -1,67 +1,62 @@
 export const products = [{
-    id: 1,
-    name: "Driscoll’s Strawberries",
-    description: "Driscoll’s Strawberries are consistently the best, sweetest, juiciest strawberries available. This size is the best selling, as it is both convenient for completing a cherished family recipes and for preparing a quick snack straight from the fridge.",
-    categories: ["produce", "gluten"]
+    name: "Grilled Sweet Potatoes",
+    slug: "Grilled Sweet Potatoes",
+    ingredients: " 2 pounds sweet potatoes - 3-4 tablespoons extra virgin olive oil - Kosher salt - 1/4 cup finely chopped fresh cilantro (including tender stems) - 1 teaspoon of lime zest or lemon zest - 2 tablespoons of fresh lime or lemon juice - 1/4 cup extra virgin olive oil - Pinch of salt",
+    categories: ["gluten"]
   },
 
-
   {
-    id: 2,
-    name: "Nestle Toll House Cookie Dough",
-    description: "Get the classic taste that America loves in a ready to bake dough. Full of our famous morsels, these cookies deliver the chocolate flavor you’ve come to expect from Nestle Toll House.",
-    categories: ["snacks", "vegan"]
+    name: "Perfect Guacamole",
+    slug: "Perfect Guacamole",
+    ingredients: "2 ripe avocados - 1/2 teaspoon Kosher salt - 1 Tbsp of fresh lime juice or lemon juice - 2 Tbsp to 1/4 cup of minced red onion or thinly sliced green onion - 1-2 serrano chiles, stems and seeds removed, mince - 2 tablespoons cilantro (leaves and tender stems), finely chopped -A dash of freshly grated black pepper - 1/2 ripe tomato, seeds and pulp removed, chopped",
+    categories: ["gluten"]
   },
   {
-    id: 3,
-    name: "Gotham Greens Gourmet Lettuce Medley",
-    description: "This lovely blend features Gotham Greens’ Tropicana green leaf, Red Sail red leaf, Oak leaf, Lollo Rossa and tender Butterhead lettuces. Perfect for a colorful salad that's (almost) grown right in your own backyard!",
+    name: "Caprese Pasta Salad",
+    slug: "Caprese Pasta Salad",
+    ingredients: "1/2 pound small shaped pasta, such as orecchiette, farfalle, or campanelle -1 tablespoon + 1/2 teaspoon Kosher salt - 1/3 cup olive oil -3 to 5 garlic cloves, minced - 1 teaspoon freshly ground pepper - 1 pound (3 cups) cherry or grape tomatoes, halved - 8 ounces mozzarella, torn -10 large fresh basil leaves, torn,",
     categories: ["produce", "vegetables"]
   },
   {
-    id: 4,
-    name: "Gold Medal All Purpose Flour",
-    description: "All-purpose bleached flour is great for just about everything but doesn’t add any color. It’s perfect for baked goods like white sandwich bread and cake.",
-    categories: ["baking"]
+    name: "Waldorf Salad",
+    slug: "Waldorf Salad",
+    ingredients: "6 Tbsp mayonnaise (or plain yogurt) - 1 Tbsp lemon juice -1/2 teaspoon salt - Pinch of freshly ground black pepper - 2 sweet apples, cored and chopped -1 cup red seedless grapes, sliced in half (or 1/4 cup of raisins) - 1 cup celery, thinly sliced - 1 cup chopped, slightly toasted walnuts - Lettuce",
+    categories: ["vegetarian"]
   },
   {
-    id: 5,
-    name: "Honey Nut Cheerios",
-    description: "You already know that Honey Nut Cheerios Naturally Flavored has the irresistible taste of golden honey, making it a family favorite. Something that everyone can smile about! ",
-    categories: ["breakfast"]
+    name: "Easy Grilled Salmon",
+    slug: "Easy Grilled Salmon",
+    ingredients: "1 1/2 to 3 pounds salmon fillets, skin-on (about 1/3 to 1/2 pound per person) - Extra virgin olive oil - 1/2 cup soy sauce (use gluten-free soy sauce if cooking gluten-free) - 1/4 cup mirin (sweet Japanese rice wine) or seasoned rice vinegar - 1/4 cup brown sugar - 2 tablespoons minced garlic - 2 tablespoons minced fresh ginger - 1/4 cup minced green onions - 2 tablespoons vegetable oil -Pinch chili pepper flakes ",
+    categories: ["gluten"]
   },
   {
-    id: 6,
-    name: "Eggo Nutri-Grain Whole Wheat Waffles",
-    description: "Eggo® Nutri-Grain® waffles made with whole wheat have the same light and crispy texture as our original Eggo® Waffles, only with the added bonus of nutritious whole grain! ",
-    categories: ["breakfast", "frozen"]
+    name: "Bruschetta with Tomato and Basil",
+    slug: "Bruschetta with Tomato and Basil",
+    ingredients: "6 or 7 ripe tomatoes (about 1 1/2 lbs) - 2 cloves garlic, minced (about 2 teaspoons) -1 Tbsp extra virgin olive oil -1 teaspoon balsamic vinegar -6-8 fresh basil leaves, thinly sliced* or chopped - 3/4 teaspoon sea salt, more or less to taste - 1/2 teaspoon freshly ground black pepper, more or less to taste - 1 baguette French bread or similar Italian bread - 1/4 cup (60 ml) olive oil",
+    categories: ["vegetarian", "vegan"]
   },
   {
-    id: 7,
-    name: "Amy’s Cheese Pizza",
-    description: "The classic favorite, made with our savory pizza sauce and grated part-skim mozzarella cheese.",
-    categories: ["frozen", "snacks"]
+    name: "Easy Homemade Hummus",
+    slug: "Easy Homemade Hummus",
+    ingredients: "1/2 cup of tahini (roasted, not raw) - 1/4 cup extra virgin olive oil (plus more for garnishing) - 2 garlic cloves, mashed and roughly chopped - 2 15-oz cans of chickpeas (garbanzo beans), drained - 1/4 cup freshly squeezed - lemon juice - 1/2 cup water - 1/2 teaspoon of salt -Garnishes: A sprinkling of paprika, a swirl of olive oil, toasted pine nuts, and/or chopped parsle",
+    categories: ["vegetarian", "vegan"]
   },
   {
-    id: 8,
-    name: "Birds Eye Steamfresh Fresh Frozen Vegetable Mix",
-    description: "Delicious Birds Eye vegetables in blends that are just right for side dishes and your recipes.",
-    categories: ["frozen", "vegetables"]
+    name: "Classic Baked Chicken",
+    slug: "Classic Baked Chicken",
+    ingredients: "One 3 to 4 pound chicken, cut into 8 parts (2 breasts, 2 thighs, 2 legs, 2 wings), excluding the back - Extra virgin olive oil - Kosher salt -Freshly ground black pepper - 1/2 cup low sodium chicken stock (see Recipe Note) or white wine for the gravy (optional).",
+    categories: ["meat", "chix"]
   },
   {
-    id: 9,
-    name: "Bare Coconut Chips",
-    description: "Simply made with coconuts, cane sugar, and sea salt.",
-    categories: ["snacks"]
+    name: "Goldfish Chicken Tenders",
+    slug: "Goldfish Chicken Tenders",
+    ingredients: "Nonstick spray, for sheet pan - 2 cups Goldfish cheese crackers, well crushed - 1 cup all-purpose flour -1 teaspoon salt -1 teaspoon black pepper - 3 large eggs - 2 pounds chicken breast, sliced into strips about 2-inches long and 1/2-inch thick",
+    categories: ["meat", "chix"]
   },
   {
-    id: 10,
-    name: "Snapple Peach Tea",
-    description: "To Peach their own. Smooth Snapple tea, perfect peach flavor. We made it just for you from the Best Stuff on Earth.",
-    price: 12.99,
-    available: 4,
-    weight: 12,
-    perishable: false,
-    categories: ["beverages", "vegan"]
+    name: "Chicken Tikka Masala",
+    slug: "Chicken Tikka Masala",
+    ingredients: "1 1/4 pounds boneless skinless chicken breasts, thighs, or a mix - 6 tablespoons plain whole milk yogurt - 1/2 tablespoon grated ginger - 3 cloves of garlic, minced - 1 teaspoon cumin - 1 teaspoon paprika - 1 1/4 teaspoons salt - 2 tablespoons canola oil, ",
+    categories: ["meat", "chix"]
   }
 ];

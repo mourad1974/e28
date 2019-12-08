@@ -25,7 +25,7 @@ export default {
   components: {},
   data: function() {
     return {
-      links: ['recipes', 'vegan', 'Gluten Free', 'cart']
+      links: ['recipes', 'vegan', 'Gluten Free', 'cart', 'create']
     };
   },
   computed: {

@@ -11,10 +11,10 @@ describe("RecipeDetail.vue", () => {
   it("show details of a recipe ", () => {
 
     let product = {
-      id: 1,
-      name: 'Driscoll’s Strawberries',
-      description: 'Driscoll’s Strawberries are consistently the best, sweetest, juiciest strawberries available. This size is the best selling, as it is both convenient for completing a cherished family recipes and for preparing a quick snack straight from the fridge.',
-      categories: ['produce', 'gluten']
+      name: "Grilled Sweet Potatoes",
+      slug: "Grilled Sweet Potatoes",
+      ingredients: " 2 pounds sweet potatoes - 3-4 tablespoons extra virgin olive oil - Kosher salt - 1/4 cup finely chopped fresh cilantro (including tender stems) - 1 teaspoon of lime zest or lemon zest - 2 tablespoons of fresh lime or lemon juice - 1/4 cup extra virgin olive oil - Pinch of salt",
+      categories: ["gluten"]
     };
     const wrapper = shallowMount(RecipeDetail, {
       propsData: {
@@ -24,7 +24,7 @@ describe("RecipeDetail.vue", () => {
         RouterLink: RouterLinkStub
       }
     })
-    expect(wrapper.text()).to.include(product.name);
+    expect(wrapper.text()).to.include(product.slug);
     let CheckTherouter = wrapper.find('[data-test="the-link"]').exists();
     expect(CheckTherouter).to.equal(true);
   })

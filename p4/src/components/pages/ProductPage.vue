@@ -2,12 +2,12 @@
   <div id='product-page' v-if='product'>
     <h1 data-test='product-name'>{{ product.name }}</h1>
     <img
-      v-if='product.id'
-      :alt='"Product image of " + product.name'
-      :src='require("./../../assets/images/products/" + product.id + ".jpg")'
+      v-if='product.slug'
+      :alt='"Product image of " + product.slug'
+      :src='product.slug | productImage'
     />
     <p class='ingredients'>{{ product.ingredients }}</p>
-    <button @click='addToCart(product.id)'>Add to Cart</button>
+    <button @click='addToCart(product.slug)'>Add to Cart</button>
     <div class='alert' v-if='addAlert'>Item was added to your cart</div>
   </div>
 </template>
@@ -17,7 +17,7 @@ import * as app from './../../app.js';
 
 export default {
   name: 'ProductsPage',
-  props: ['id'],
+  props: ['slug'],
   data: function() {
     return {
       addAlert: false
@@ -26,7 +26,7 @@ export default {
   mounted() {},
   computed: {
     product: function() {
-      return this.$store.getters.getProductById(this.id);
+      return this.$store.getters.getProductBySlug(this.slug);
     }
   },
   methods: {

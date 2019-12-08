@@ -1,8 +1,8 @@
 <template>
   <div class='product'>
-    <router-link :to='{ name: "product", params: { id: product.id } }'>
+    <router-link data-test='product-link' :to='{ name: "product", params: { slug: product.slug } }'>
       <div class='product-name'>{{ product.name }}</div>
-      <img :src='require("../assets/images/products/" + product.id + ".jpg")' />
+      <img :src='product.slug | productImage' />
     </router-link>
   </div>
 </template>

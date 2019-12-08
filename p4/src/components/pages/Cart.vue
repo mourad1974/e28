@@ -3,13 +3,13 @@
     <h1>Your Recipes Cart</h1>
     <div v-if="items.length == 0">Empty Cart</div>
 
-    <ul v-else-if="products.length > 0">
-      <li v-for="item in items" :key="item.id" class="shpping-cart">
+    <ul v-else-if="products">
+      <li v-for="item in items" :key="item.slug" class="shopping-cart">
         {{ item.quantity }} Recipe(s) of "
-        <span>{{ getProductDetails(item.id)["name"] }}</span
+        <span>{{ getProductDetails(item.slug)["name"] }}</span
         >"
         <br />
-        <button @click="removeFromCart(item.id)">Delete This recipe</button>
+        <button @click="removeFromCart(item.slug)">Delete This recipe</button>
       </li>
     </ul>
   </div>
@@ -26,11 +26,11 @@ export default {
     };
   },
   methods: {
-    getProductDetails(productId) {
-      return this.products.find(({ id }) => id === productId);
+    getProductDetails(productSlug) {
+      return this.$store.getters.getProductBySlug(productSlug);
     },
-    removeFromCart: function(productId) {
-      this.cart.remove(productId);
+    removeFromCart: function(productSlug) {
+      this.cart.remove(productSlug);
       this.$store.commit("setCartCount", this.cart.count());
     }
   },
