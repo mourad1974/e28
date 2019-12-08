@@ -1,10 +1,12 @@
 html {
   box-sizing: border-box;
 }
+
 :before,
 *:after {
   box-sizing: inherit;
 }
+
 #app {
   width: 90%;
   margin: 0 auto;
@@ -27,9 +29,11 @@ nav ul li {
   line-height: 70px;
   margin: 1rem;
 }
+
 nav ul {
   list-style: none;
 }
+
 nav ul li a {
   text-decoration: none;
   font-family: verdana;
@@ -37,6 +41,7 @@ nav ul li a {
   font-size: 1.1rem;
   text-transform: capitalize;
 }
+
 nav a:hover {
   color: yellow;
 }
@@ -62,14 +67,17 @@ nav a:hover {
   text-align: center;
   text-decoration: none;
 }
+
 .product a {
   text-decoration: none;
 }
+
 #products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .product {
   width: 40%;
   margin: 0 auto;
@@ -132,17 +140,21 @@ nav a:hover {
   border-radius: 2rem;
   font-size: 1.3rem;
 }
+
 #products {
   text-align: center;
 }
+
 #app {
   text-align: center;
 }
+
 #filtered ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 #filtered li {
   background-color: #ff9b30;
   list-style: none;
@@ -164,6 +176,7 @@ nav a:hover {
   list-style: none;
   font-size: 1rem;
 }
+
 span {
   color: lightseagreen;
   font-size: 1.3rem;
@@ -176,10 +189,101 @@ span {
   color: white;
   font-size: 1rem;
 }
+
 .cart-item {
   margin-bottom: 2rem;
 }
 
 .shpping-cart {
   margin-bottom: 1rem;
+}
+
+
+/*----------------------------------------------------
+Forms
+-----------------------------------------------------*/
+form {
+  text-align: left;
+  width: 70%;
+  margin: 0 auto
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 10px 0 5px 0;
+  font-weight: bold;
+}
+
+input[type=text],
+textarea {
+  font-size: 1rem;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid silver;
+
+}
+
+.form-input-error {
+  border: 1px solid red;
+}
+
+label.form-checkbox-label {
+  text-transform: none;
+}
+
+.form-group {
+  margin: 20px 0;
+}
+
+.form-help {
+  font-size: 1rem;
+  color: gray;
+  margin-top: 5px;
+}
+
+.form-feedback {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.form-feedback-error {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.form-feedback-success {
+  color: green;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+button {
+  background-color: blue;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darken(blue, 10%);
+}
+
+input[type=checkbox],
+input[type=radio] {
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+}
+
+input[type=radio] {
+  bottom: 2px;
 }
