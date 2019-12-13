@@ -1,3 +1,4 @@
+/* main */
 html {
   box-sizing: border-box;
 }
@@ -198,35 +199,32 @@ span {
   margin-bottom: 1rem;
 }
 
-
 /*----------------------------------------------------
 Forms
 -----------------------------------------------------*/
 form {
   text-align: left;
   width: 70%;
-  margin: 0 auto
+  margin: 0 auto;
+  background-color: beige;
+  padding: 2rem;
+  border: gray 2px solid;
 }
 
 label {
   display: block;
   font-size: 1.2rem;
-  text-transform: uppercase;
+
   margin: 10px 0 5px 0;
   font-weight: bold;
 }
 
-input[type=text],
+input[type="text"],
 textarea {
   font-size: 1rem;
   padding: 5px;
   width: 100%;
   border: 1px solid silver;
-
-}
-
-.form-input-error {
-  border: 1px solid red;
 }
 
 label.form-checkbox-label {
@@ -250,8 +248,8 @@ label.form-checkbox-label {
 }
 
 .form-feedback-error {
-  color: red;
-  font-size: 1.2rem;
+  color: magenta;
+  font-size: 1rem;
   font-weight: bold;
   padding: 10px 0;
 }
@@ -264,7 +262,7 @@ label.form-checkbox-label {
 }
 
 button {
-  background-color: blue;
+  background-color: green;
   font-size: 20px;
   border-radius: 5px;
   border: 0;
@@ -277,13 +275,13 @@ button:hover {
   background-color: darken(blue, 10%);
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   vertical-align: middle;
   position: relative;
   bottom: 1px;
 }
 
-input[type=radio] {
+input[type="radio"] {
   bottom: 2px;
 }

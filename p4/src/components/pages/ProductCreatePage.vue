@@ -1,108 +1,133 @@
 <template>
   <div id='product-create'>
-    <h1>Add a Product</h1>
-    <form @submit.prevent='handelSubmit'>
+    <h1>Create a Recipe</h1>
+    <form @submit.prevent='handleSubmit'>
       <div class='form-group'>
-        <label for='name'>URL</label>
-        <input type='text' id='slug' v-model='product.slug' />
+        <!-- name -->
+        <label for='name'>Recipe Name</label>
+        <input
+          type='text'
+          :class='{ "form-input-error": $v.product.slug.$error }'
+          id='slug'
+          data-test='product-slug-input'
+          v-model='$v.product.slug.$model'
+        />
 
-        <small class='form-help'>Min: 4</small>
+        <div v-if='$v.product.slug.$error'>
+          <div class='form-feedback-error' v-if='!$v.product.slug.required'>Product URL is required.</div>
+          <div
+            class='form-feedback-error'
+            v-else-if='!$v.product.slug.minLength'
+          >Recipe Name must be at leat 8 letters</div>
+
+          <div
+            class='form-feedback-error'
+            v-else-if='!$v.product.slug.doesNotExist'
+          >This recipe alrady exist</div>
+        </div>
+
+        <small class='form-help'>A name with at leat 8 characters</small>
       </div>
 
+      <!-- ingrediants -->
       <div class='form-group'>
-        <label for='name'>Name</label>
-        <input type='text' id='name' v-model='product.name' />
+        <label for='ingredients'>Ingrediants</label>
+        <textarea
+          :class='{ "form-input-error": $v.product.ingredients.$error }'
+          data-test='product-ingredients-textarea'
+          id='ingredients'
+          v-model='product.ingredients'
+        ></textarea>
+        <div v-if='$v.product.ingredients.$error'>
+          <div
+            class='form-feedback-error'
+            v-if='!$v.product.ingredients.required'
+          >Product URL is required.</div>
+        </div>
       </div>
 
-      <div class='form-group'>
-        <label for='description'>Description</label>
-        <textarea id='description' v-model='product.description'></textarea>
-      </div>
-
-      <div class='form-group'>
-        <label for='price'>Price</label>
-        <input type='text' id='price' v-model='product.price' />
-      </div>
-
-      <div class='form-group'>
-        <label for='weight'>Weight</label>
-        <input type='text' id='weight' v-model='product.weight' />
-        <small class='form-help'>Decimal value in lbs.</small>
-      </div>
-
+      <!-- categorie -->
       <div class='form-group'>
         <label for='categories'>Categories</label>
 
-        <input type='text' id='categories' v-model='product.categories' />
+        <input
+          type='text'
+          id='categories'
+          data-test='product-categories-input'
+          v-model='product.categories'
+        />
         <small id='categoriesHelp' class='form-help'>Comma separated</small>
       </div>
 
-      <div class='form-group'>
-        <label class='form-checkbox-label'>
-          <input type='checkbox' v-model='product.perishable' /> Perishable
-        </label>
-      </div>
+      <button data-test='add-product-button' type='submit'>Add This Recipe</button>
 
-      <button type='submit'>Add Product</button>
+      <div class='form-feedback-error' v-if='formHasErrors'>Please correct the above errors</div>
     </form>
   </div>
 </template>
 
 <script>
 import * as app from './../../app.js';
+import { required, minLength } from 'vuelidate/lib/validators';
 
 let product = {};
-// If in dev mode, we'll pre-fill the product to make demo/testing easier
-if (process.env.NODE_ENV == 'development') {
-  product = {
-    slug: 'indiana-gourmet-kettlecorn-popcorn',
-    name: 'Indiana Gourmet Kettlecorn Popcorn',
-    description:
-      'We combine the finest popping corn, the right amount of salt and pure sugar cane, then we heat it just right, so that the sugar is melting just as the corn starts to pop—leaving every piece with a thin shell of salty sweetness. Be careful, it’s hard to eat just one bite of our handcrafted, gluten free Original Kettlecorn. Munch Better.',
-    price: 4.49,
-    weight: 0.44,
-    perishable: false,
-    categories: ['snacks', 'gluten-free']
-  };
-} else {
-  product = {
-    slug: '',
-    name: '',
-    description: '',
-    price: '',
-    weight: '',
-    perishable: false,
-    categories: []
-  };
-}
 
 export default {
   name: 'ProductCreatePage',
   data: function() {
     return {
-      product: product
+      product: product,
+      formHasErrors: false
     };
   },
+  validations: {
+    product: {
+      slug: {
+        required,
+        minLength: minLength(8),
+        doesNotExist(value) {
+          return !this.$store.getters.getProductBySlug(value);
+        }
+      },
+      ingredients: {
+        required
+      },
+      categories: {
+        required
+      }
+    }
+  },
+  watch: {
+    '$v.$anyError': function() {
+      this.formHasErrors = this.$v.$anyError;
+    }
+  },
   methods: {
-    handelSubmit: function() {
-      //   console.log('Submitte From');
-      // validation
-      // axios
+    handleSubmit: function() {
+      if (!this.formHasErrors) {
+        // Axios request to the server to persist the new product
+        app.axios
+          .post(app.config.api + 'products.json', this.product)
+          .then(response => {
+            let key = response.data.name;
 
-      app.axios
-        .post(app.config.api + 'products.json', this.product)
-        .then(response => {
-          console.log(response);
-        });
+            this.$store.commit('addProduct', {
+              [key]: this.product
+            });
 
-      // update
+            this.$router.push({
+              name: 'product',
+              params: { slug: this.product.slug }
+            });
+          });
+      }
     }
   }
 };
 </script>
 
 <style scoped>
-#description {
+#ingredients {
   height: 150px;
 }
 </style>

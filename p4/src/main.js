@@ -8,6 +8,7 @@ import VeganPage from "./components/pages/VeganPage.vue";
 import ProductPage from "./components/pages/ProductPage.vue";
 import Cart from "./components/pages/Cart.vue";
 import ProductCreatePage from './components/pages/ProductCreatePage.vue';
+import Vuelidate from 'vuelidate';
 
 import './filters.js';
 
@@ -17,10 +18,10 @@ const _ = require('lodash')
 
 
 import store from "./store";
+Vue.use(Vuelidate);
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
-
 const routes = [{
     path: "/Vegan",
     component: VeganPage,
