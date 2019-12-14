@@ -89,6 +89,7 @@ nav a:hover {
   margin-left: 10px;
 }
 
+
 .product-name {
   background-color: red;
   background-color: yellow;
@@ -112,6 +113,8 @@ nav a:hover {
   width: 70%;
   margin: 0 auto;
   padding: 1rem;
+  margin-bottom: 6rem;
+
 }
 
 #product-page p {
@@ -227,15 +230,13 @@ textarea {
   border: 1px solid silver;
 }
 
-label.form-checkbox-label {
-  text-transform: none;
-}
 
-.form-group {
+
+.sections {
   margin: 20px 0;
 }
 
-.form-help {
+.tips {
   font-size: 1rem;
   color: gray;
   margin-top: 5px;
@@ -247,41 +248,38 @@ label.form-checkbox-label {
   padding: 10px 0;
 }
 
-.form-feedback-error {
+.warning-feedback {
   color: magenta;
   font-size: 1rem;
   font-weight: bold;
   padding: 10px 0;
 }
 
-.form-feedback-success {
-  color: green;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 10px 0;
-}
+
 
 button {
-  background-color: green;
+  background-color: blue;
   font-size: 20px;
   border-radius: 5px;
   border: 0;
   padding: 10px;
   color: white;
   cursor: pointer;
+
 }
 
 button:hover {
   background-color: darken(blue, 10%);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  vertical-align: middle;
-  position: relative;
-  bottom: 1px;
+
+
+
+#ingredients {
+  height: 150px;
+
 }
 
-input[type="radio"] {
-  bottom: 2px;
+form {
+  margin-bottom: 5rem
 }

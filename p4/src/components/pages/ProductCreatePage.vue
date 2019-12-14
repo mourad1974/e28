@@ -1,53 +1,66 @@
 <template>
-  <div id='product-create'>
-    <h1>Create a Recipe</h1>
+  <div id='create-recipe'>
+    <h1>Create a recipe</h1>
+    <div>All fileds are required</div>
+    <!-- your name =======================+++++++++++===============================================-->
+
     <form @submit.prevent='handleSubmit'>
-      <div class='form-group'>
-        <!-- name -->
+      <div class='sections'>
+        <label for='name'>Your name</label>
+        <input
+          type='text'
+          :class='{ "Warning-error": $v.product.name.$error }'
+          data-test='recipe-name-input'
+          id='name'
+          v-model='$v.product.name.$model'
+        />
+        <div v-if='$v.product.name.$error'>
+          <div
+            class='warning-feedback'
+            v-if='!$v.product.name.required'
+          >First or last name is required</div>
+        </div>
+        <small class='tips'>First/Last name</small>
+      </div>
+
+      <!-- recipe name =======================+++++++++++===============================================-->
+      <div class='sections'>
         <label for='name'>Recipe Name</label>
         <input
           type='text'
-          :class='{ "form-input-error": $v.product.slug.$error }'
+          :class='{ "Warning-error": $v.product.slug.$error }'
           id='slug'
-          data-test='product-slug-input'
+          data-test='recipe-slug'
           v-model='$v.product.slug.$model'
         />
 
         <div v-if='$v.product.slug.$error'>
-          <div class='form-feedback-error' v-if='!$v.product.slug.required'>Product URL is required.</div>
           <div
-            class='form-feedback-error'
-            v-else-if='!$v.product.slug.minLength'
-          >Recipe Name must be at leat 8 letters</div>
+            class='warning-feedback'
+            v-if='!$v.product.slug.minLength'
+          >Recipte Title must be at least 8 charachters</div>
 
           <div
-            class='form-feedback-error'
+            class='warning-feedback'
             v-else-if='!$v.product.slug.doesNotExist'
-          >This recipe alrady exist</div>
+          >This recipe already exists in our website</div>
         </div>
 
-        <small class='form-help'>A name with at leat 8 characters</small>
+        <small class='tips'>Must be at lesat 8 Characters</small>
       </div>
 
-      <!-- ingrediants -->
-      <div class='form-group'>
-        <label for='ingredients'>Ingrediants</label>
+      <!--description =======================+++++++++++===============================================-->
+
+      <div class='sections'>
+        <label for='description'>Description</label>
         <textarea
-          :class='{ "form-input-error": $v.product.ingredients.$error }'
-          data-test='product-ingredients-textarea'
-          id='ingredients'
-          v-model='product.ingredients'
+          data-test='recipe-description-textarea'
+          id='description'
+          v-model='product.description'
         ></textarea>
-        <div v-if='$v.product.ingredients.$error'>
-          <div
-            class='form-feedback-error'
-            v-if='!$v.product.ingredients.required'
-          >Product URL is required.</div>
-        </div>
       </div>
-
-      <!-- categorie -->
-      <div class='form-group'>
+      <!-- categories =======================+++++++++++===============================================-->
+      <div class='sections'>
         <label for='categories'>Categories</label>
 
         <input
@@ -56,12 +69,12 @@
           data-test='product-categories-input'
           v-model='product.categories'
         />
-        <small id='categoriesHelp' class='form-help'>Comma separated</small>
+        <small id='categoriesHelp' class='tips'>Please separate categories with commas</small>
       </div>
 
-      <button data-test='add-product-button' type='submit'>Add This Recipe</button>
+      <button data-test='Add-recipe' type='submit'>Add This Recipe</button>
 
-      <div class='form-feedback-error' v-if='formHasErrors'>Please correct the above errors</div>
+      <div class='warning-feedback' v-if='formHasErrors'>Please Be Sure you fiilled all fileds above</div>
     </form>
   </div>
 </template>
@@ -89,7 +102,10 @@ export default {
           return !this.$store.getters.getProductBySlug(value);
         }
       },
-      ingredients: {
+      name: {
+        required
+      },
+      description: {
         required
       },
       categories: {
@@ -127,7 +143,7 @@ export default {
 </script>
 
 <style scoped>
-#ingredients {
+#description {
   height: 150px;
 }
 </style>
